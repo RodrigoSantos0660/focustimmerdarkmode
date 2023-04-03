@@ -49,6 +49,7 @@ function volumesom(event){
 }
 
 function timmer(){
+ 
   let secondstratdo = Number(seconds.textContent)
   seconds.textContent = String(secondstratdo-1).padStart(2,'0')
  if(minutes.textContent <= 0 && seconds.textContent <= 0){
@@ -63,7 +64,7 @@ function timmer(){
 }
 
 function starttimmer(){
-    botaoplay.removeEventListener('click',starttimmer)
+    //botaoplay.removeEventListener('click',isnumber)
     controleintervalo= setInterval(timmer,1000)
   }
   
@@ -71,7 +72,7 @@ function stoptimmer(){
   
   seconds.textContent= '00'
   minutes.textContent= '00'
-  botaoplay.addEventListener('click',starttimmer)
+  botaoplay.addEventListener('click',isnumber)
   clearInterval(controleintervalo)
 }
 
@@ -158,17 +159,18 @@ function reproduzirson(event){
 
 function isnumber() {
   if(minutes.textContent !== '00'){
-    botaoplay.removeEventListener('click',starttimmer)
+    botaoplay.removeEventListener('click',isnumber)
     starttimmer()
   }
   else{
   let num= prompt('digite um tempo para o cronometro')
   if(/^(\-|\+)?([0-9]+|Infinity)$/.test(num)){
    minutes.textContent = num
-    timmer();
+   botaoplay.removeEventListener('click',isnumber)
+   starttimmer();
   }else{
    alert('DIGITE UM VALOR VALIDO')
-   botaoplay.addEventListener('click',starttimmer)
+   botaoplay.addEventListener('click',isnumber)
    stoptimmer()
    
   }
