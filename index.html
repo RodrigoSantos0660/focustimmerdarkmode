@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <title>Timer-focus2.0</title>
+</head>
+<body>
+  <main class="boxprincipal">
+    <img class="iconmode" id="dark" src="./assets/icon.-darkmode.svg" alt="icone para modo diurno">
+    <img class="iconmode" id="ligth" src="./assets/icon-ligthmode.svg" alt="icone para modo diurno">
+    <div class="boxtimerbuttons">
+    <div class="displaytimer">
+      <div class="minutes">00</div>
+      <div id="doispontos-display">:</div>
+      <div class="seconds">00</div>
+    </div>
+    <div class="buttonstimer">
+      <img id="botaoplay" src="./assets/play.svg" alt="botao de play">
+      <img id="stopbotaos" src="./assets/stop.svg" alt="botao de stop">
+      <img id="botaoaddtime" src="./assets/mais.svg" alt="botao de adicionar tempo">
+      <img id="botaoremovetime" src="./assets/menos.svg" alt="botao de subtrair">
+    </div>
+  </div>
+  <div  class="cardsons">
+    <div class="btnsons"><img class="floresta" src="./assets/floresta.svg" alt="botao com desenho de floresta ">
+      <audio id="audiofloresta">
+        <source src="./assets/Floresta.wav" type="audio/mp3" />
+        seu navegador não suporta HTML5
+      </audio>
+      <input type="range"id="audioflorest" class="volumeinput volumeinput2" min="0"value="0.5"max="1"step="0.1">
+    </div>
+    <div class="btnsons  chuva"><img class="chuva" src="./assets/chuva.svg" alt="botao para son de chuva">
+      <audio id="audiochuva">
+        <source  src="./assets/Chuva.wav" type="audio/mp3" />
+        seu navegador não suporta HTML5
+        </audio>
+    <input type="range"id="audiochuv" class="volumeinput2" min="0"value="0.5"max="1"step="0.1">
+    </div>
+    <div class="btnsons"><img class="cafeteria" src="./assets/btncafeteria.svg" alt="botao para son de cafeteria">
+      <audio id="audiocafeteria">
+        <source src="./assets/Cafeteria.wav" type="audio/mp3" />
+        seu navegador não suporta HTML5
+        </audio>
+    <input type="range"id="audiocafeteri"class="volumeinput volumeinput2" min="0"value="0.5"max="1"step="0.1">
+    </div>
+    <div class="btnsons"><img class="lareira" src="./assets/fogueira.svg" alt="botao para son de fogueira">
+      <audio id="audiolareira">
+        <source src="./assets/Lareira.wav" type="audio/mp3" />
+        seu navegador não suporta HTML5
+        </audio>
+    <input type="range"id="audiolareir" class="volumeinput volumeinput2" min="0"value="0.5"max="1"step="0.1"">
+    
+    </div>
+  </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
